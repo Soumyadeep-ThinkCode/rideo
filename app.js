@@ -14,11 +14,6 @@ app.use(function(req, res, next){
   return next();
 });
 
-/* scheduler start */
-var j =  schedule.scheduleJob(unbookScheduler.cronExprUnbook, unbookScheduler.func);
-var k = schedule.scheduleJob(unbookScheduler.cronExprExpire, unbookScheduler.expireFunc);
-/* scheduler end */
-
 app.get('/',function(req,res){
 	res.sendFile(path.join(__dirname,'public','index.html'));
 });
