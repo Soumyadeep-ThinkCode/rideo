@@ -1,5 +1,4 @@
 var app = require('express')();
-var db = require('./db');
 var path = require('path');
 var express = require('express');
 var schedule = require('node-schedule');
